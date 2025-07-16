@@ -1123,6 +1123,12 @@ func (s *Server) publishRetainedToClient(cl *Client, sub packets.Subscription, e
 	}
 
 	sub.FwdRetainedFlag = true
+
+	if sub.Identifiers == nil {
+		sub.Identifiers = map[string]int{sub.Filter: sub.Identifier}
+	}
+
+	
 	for _, pkv := range s.Topics.Messages(sub.Filter) { // [MQTT-3.8.4-4]
 		_, err := s.publishToClient(cl, sub, pkv)
 		if err != nil {
