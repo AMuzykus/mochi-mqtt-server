@@ -15,6 +15,8 @@ require (
 	gopkg.in/yaml.v3 v3.0.1
 )
 
+replace github.com/mochi-mqtt/server/v2 v2.7.9 => github.com/AMuzykus/mochi-mqtt-server/v2 v2.7.9
+
 require (
 	github.com/DataDog/zstd v1.4.5 // indirect
 	github.com/alicebob/gopher-json v0.0.0-20200520072559-a9ecdc9d1d3a // indirect
