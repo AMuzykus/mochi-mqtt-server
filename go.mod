@@ -1,6 +1,6 @@
 module github.com/AMuzykus/mochi-mqtt-server/v2
 
-go 1.21
+go 1.24
 
 require (
 	github.com/alicebob/miniredis/v2 v2.23.0
@@ -14,8 +14,6 @@ require (
 	go.etcd.io/bbolt v1.3.5
 	gopkg.in/yaml.v3 v3.0.1
 )
-
-replace github.com/mochi-mqtt/server/v2 v2.7.9 => github.com/AMuzykus/mochi-mqtt-server/v2 v2.7.9
 
 require (
 	github.com/DataDog/zstd v1.4.5 // indirect

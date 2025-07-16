@@ -7,8 +7,8 @@ package auth
 import (
 	"bytes"
 
-	mqtt "github.com/mochi-mqtt/server/v2"
-	"github.com/mochi-mqtt/server/v2/packets"
+	mqtt "github.com/AMuzykus/mochi-mqtt-server/v2"
+	"github.com/AMuzykus/mochi-mqtt-server/v2/packets"
 )
 
 // Options contains the configuration/rules data for the auth ledger.
