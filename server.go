@@ -52,7 +52,7 @@ type Capabilities struct {
 	MaximumPacketSize            uint32          `yaml:"maximum_packet_size" json:"maximum_packet_size"`                         // maximum packet size, no limit if 0
 	maximumPacketID              uint32          // unexported, used for testing only
 	ReceiveMaximum               uint16          `yaml:"receive_maximum" json:"receive_maximum"`                   // maximum number of concurrent qos messages per client
-	MaximumInflight              uint16          `yaml:"maximum_inflight" json:"maximum_inflight"`                 // maximum number of qos > 0 messages can be stored, 0(=8192)-65535
+	MaximumInflight              uint32          `yaml:"maximum_inflight" json:"maximum_inflight"`                 // maximum number of qos > 0 messages can be stored, 0(=8192)-65535
 	TopicAliasMaximum            uint16          `yaml:"topic_alias_maximum" json:"topic_alias_maximum"`           // maximum topic alias value
 	SharedSubAvailable           byte            `yaml:"shared_sub_available" json:"shared_sub_available"`         // support of shared subscriptions
 	MinimumProtocolVersion       byte            `yaml:"minimum_protocol_version" json:"minimum_protocol_version"` // minimum supported mqtt version

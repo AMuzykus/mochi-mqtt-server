@@ -185,7 +185,7 @@ func TestClientParseConnect(t *testing.T) {
 }
 
 func TestClientParseConnectReceiveMaxExceedMaxInflight(t *testing.T) {
-	const MaxInflight uint16 = 1
+	const MaxInflight uint32 = 1
 	cl, _, _ := newTestClient()
 	cl.ops.options.Capabilities.MaximumInflight = MaxInflight
 

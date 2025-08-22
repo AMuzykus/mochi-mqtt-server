@@ -2180,8 +2180,8 @@ func TestPublishToClientExceedMaximumInflight(t *testing.T) {
 	const MaxInflight uint16 = 5
 	s := newServer()
 	cl, _, _ := newTestClient()
-	s.Options.Capabilities.MaximumInflight = MaxInflight
-	cl.ops.options.Capabilities.MaximumInflight = MaxInflight
+	s.Options.Capabilities.MaximumInflight = uint32(MaxInflight)
+	cl.ops.options.Capabilities.MaximumInflight = uint32(MaxInflight)
 	for i := uint16(0); i < MaxInflight; i++ {
 		cl.State.Inflight.Set(packets.Packet{PacketID: i})
 	}

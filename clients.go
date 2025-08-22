@@ -215,8 +215,8 @@ func (cl *Client) ParseConnect(lid string, pk packets.Packet) {
 	cl.Properties.Clean = pk.Connect.Clean
 	cl.Properties.Props = pk.Properties.Copy(false)
 
-	if cl.Properties.Props.ReceiveMaximum > cl.ops.options.Capabilities.MaximumInflight { // 3.3.4 Non-normative
-		cl.Properties.Props.ReceiveMaximum = cl.ops.options.Capabilities.MaximumInflight
+	if uint32(cl.Properties.Props.ReceiveMaximum) > cl.ops.options.Capabilities.MaximumInflight { // 3.3.4 Non-normative
+		cl.Properties.Props.ReceiveMaximum = uint16(cl.ops.options.Capabilities.MaximumInflight)
 	}
 
 	if pk.Connect.Keepalive <= minimumKeepalive {
